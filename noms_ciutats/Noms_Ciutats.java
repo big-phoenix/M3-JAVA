@@ -1,6 +1,6 @@
 package noms_ciutats;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Noms_Ciutats {
 
@@ -12,6 +12,7 @@ public class Noms_Ciutats {
 		String nom4; // Ciutat 4
 		String nom5; // Ciutat 5
 		String nom6; // Ciutat 6
+		ArrayList<String> arrayCiutats = new ArrayList<String>();
 		
 		Scanner ciudad = new Scanner(System.in); // Creamos el objeto Scanner para introducir datos por consola
 		
@@ -40,7 +41,27 @@ public class Noms_Ciutats {
 		System.out.println("Ciudad: " +nom6); // Mostramos el valor guardado
 		
 		
-		System.out.println("\nCiudades: " +nom1+ "-" +nom2+ "-" +nom3+ "-" +nom4+ "-" +nom5+ "-" +nom6); // Mostramos por consola el resultado
+		System.out.println("\nCiudades: " +nom1+ "-" +nom2+ "-" +nom3+ "-" +nom4+ "-" +nom5+ "-" +nom6+ "\n"); // Mostramos por consola el resultado
+	
+		/*************************************************   FASE 2   ************************************************/
+		
+		//Añadimos las ciudades a la Array
+		
+		arrayCiutats.add(nom1);
+		arrayCiutats.add(nom2);
+		arrayCiutats.add(nom3);
+		arrayCiutats.add(nom4);
+		arrayCiutats.add(nom5);
+		arrayCiutats.add(nom6);
+		
+		Collections.sort(arrayCiutats); //Ordenamos Alfanumerico
+		
+		for(String lista : arrayCiutats) { // Mostramos todos los elementos del Array
+			System.out.print(lista+"\n");
+		}
+		
+		
+	
 	}
 
 }
