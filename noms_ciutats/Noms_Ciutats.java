@@ -13,6 +13,7 @@ public class Noms_Ciutats {
 		String nom5; // Ciutat 5
 		String nom6; // Ciutat 6
 		ArrayList<String> arrayCiutats = new ArrayList<String>();
+		ArrayList<String> ArrayCiutatsModificades = new ArrayList<String>();
 		
 		Scanner ciudad = new Scanner(System.in); // Creamos el objeto Scanner para introducir datos por consola
 		
@@ -60,8 +61,19 @@ public class Noms_Ciutats {
 			System.out.print(lista+"\n");
 		}
 		
+		/*************************************************   FASE 3   ************************************************/
 		
-	
+		
+		for(String lista : arrayCiutats) { // Recoremos el Array y guardamos el valor de las posiciones
+			ArrayCiutatsModificades.add(lista.replace('a', '4')); // Remplazamos el caracter "a" por "4"
+		}
+		
+		System.out.print("\nNueva Lista:");
+		
+		for(String lista2 : ArrayCiutatsModificades) { // Mostramos todos los elementos del Array
+			System.out.print("\n" +lista2);
+		}
+		
 	}
 
 }
