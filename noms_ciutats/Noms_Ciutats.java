@@ -15,6 +15,14 @@ public class Noms_Ciutats {
 		ArrayList<String> arrayCiutats = new ArrayList<String>();
 		ArrayList<String> ArrayCiutatsModificades = new ArrayList<String>();
 		
+		ArrayList<String> ciudad1 = new ArrayList<String>();
+		ArrayList<String> ciudad2 = new ArrayList<String>();
+		ArrayList<String> ciudad3 = new ArrayList<String>();
+		ArrayList<String> ciudad4 = new ArrayList<String>();
+		ArrayList<String> ciudad5 = new ArrayList<String>();
+		ArrayList<String> ciudad6 = new ArrayList<String>();
+		
+		
 		Scanner ciudad = new Scanner(System.in); // Creamos el objeto Scanner para introducir datos por consola
 		
 		System.out.println("Nombre de la ciudad 1: "); // Pedimos por consola la ciudad
@@ -44,35 +52,93 @@ public class Noms_Ciutats {
 		
 		System.out.println("\nCiudades: " +nom1+ "-" +nom2+ "-" +nom3+ "-" +nom4+ "-" +nom5+ "-" +nom6+ "\n"); // Mostramos por consola el resultado
 	
-		/*************************************************   FASE 2   ************************************************/
 		
-		//Añadimos las ciudades a la Array
+		/*************************************************   FASE 4   ************************************************/
 		
-		arrayCiutats.add(nom1);
-		arrayCiutats.add(nom2);
-		arrayCiutats.add(nom3);
-		arrayCiutats.add(nom4);
-		arrayCiutats.add(nom5);
-		arrayCiutats.add(nom6);
-		
-		Collections.sort(arrayCiutats); //Ordenamos Alfanumerico
-		
-		for(String lista : arrayCiutats) { // Mostramos todos los elementos del Array
-			System.out.print(lista+"\n");
+		for(int i=0; i<nom1.length(); i++) {
+			String dato = Character.toString(nom1.charAt(i));
+			ciudad1.add(i, dato);
 		}
 		
-		/*************************************************   FASE 3   ************************************************/
-		
-		
-		for(String lista : arrayCiutats) { // Recoremos el Array y guardamos el valor de las posiciones
-			ArrayCiutatsModificades.add(lista.replace('a', '4')); // Remplazamos el caracter "a" por "4"
+		for(int i=0; i<nom2.length(); i++) {
+			String dato = Character.toString(nom2.charAt(i));
+			ciudad2.add(i, dato);
 		}
 		
-		System.out.print("\nNueva Lista:");
-		
-		for(String lista2 : ArrayCiutatsModificades) { // Mostramos todos los elementos del Array
-			System.out.print("\n" +lista2);
+		for(int i=0; i<nom3.length(); i++) {
+			String dato = Character.toString(nom3.charAt(i));
+			ciudad3.add(i, dato);
 		}
+		
+		for(int i=0; i<nom4.length(); i++) {
+			String dato = Character.toString(nom4.charAt(i));
+			ciudad4.add(i, dato);
+		}
+		
+		for(int i=0; i<nom5.length(); i++) {
+			String dato = Character.toString(nom5.charAt(i));
+			ciudad5.add(i, dato);
+		}
+		
+		for(int i=0; i<nom6.length(); i++) {
+			String dato = Character.toString(nom6.charAt(i));
+			ciudad6.add(i, dato);
+		}
+		
+		
+		int num1 = ciudad1.size();
+		int num2 = ciudad2.size();
+		int num3 = ciudad3.size();
+		int num4 = ciudad4.size();
+		int num5 = ciudad5.size();
+		int num6 = ciudad6.size();
+		
+		for(int j=0; j < ciudad1.size(); j++) {
+			num1--;
+			System.out.print(ciudad1.get(num1));
+			
+		}
+		
+		System.out.print("\n");
+		
+		for(int j=0; j < ciudad2.size(); j++) {
+			num2--;
+			System.out.print(ciudad2.get(num2));
+			
+		}
+		
+		System.out.print("\n");
+		
+		for(int j=0; j < ciudad3.size(); j++) {
+			num3--;
+			System.out.print(ciudad3.get(num3));
+			
+		}
+		
+		System.out.print("\n");
+		
+		for(int j=0; j < ciudad4.size(); j++) {
+			num4--;
+			System.out.print(ciudad4.get(num4));
+			
+		}
+		
+		System.out.print("\n");
+		
+		for(int j=0; j < ciudad5.size(); j++) {
+			num5--;
+			System.out.print(ciudad5.get(num5));
+			
+		}
+		
+		System.out.print("\n");
+		
+		for(int j=0; j < ciudad6.size(); j++) {
+			num6--;
+			System.out.print(ciudad6.get(num6));
+			
+		}
+		
 		
 	}
 
